@@ -25,7 +25,7 @@ def StartSearch():
         title = item.attrs["href"].split("/")[-1]
         try:
             img = Image.open(BytesIO(img_obj.content))
-            img.save("./scraped_images/" + dir_name + "/" + title, img.format)
+            img.save("./" + dir_name + "/" + title, img.format)
         except:
             print("Could not save image!")
 
